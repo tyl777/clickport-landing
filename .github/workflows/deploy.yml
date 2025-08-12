@@ -1,0 +1,24 @@
+name: Deploy to VPS
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+
+      - name: Deploy files via rsync over SSH
+        uses: burnett01/rsync-deployments@v4
+        with:
+          switches: -avz --delete
+          path: ./           # Корень репозитория или путь к сборке
+          remote_path: /home/clickport/webdeploy
+          remote_host: ${{ secrets.REMOTE_HOST }}
+          remote_user: clickport
+          remote_key: ${{ secrets.REMOTE_PRIVATE_KEY }}

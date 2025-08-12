@@ -15,7 +15,7 @@ export default function HomeEN() {
           href="https://t.me/danil_tylevich"
           className="bg-white text-indigo-700 px-6 py-3 rounded-full font-semibold shadow hover:shadow-lg transition"
         >
-          Let's Connect on Telegram
+          "Let's" Connect on Telegram
         </a>
       </section>
 
@@ -87,7 +87,7 @@ export default function HomeEN() {
 
       {/* CTA */}
       <section className="py-16 px-6 text-center">
-        <h2 className="text-3xl font-bold mb-6">Let's Discuss Your Project</h2>
+        <h2 className="text-3xl font-bold mb-6">"Let's" Discuss Your Project</h2>
         <a
           href="https://t.me/danil_tylevich"
           className="bg-indigo-600 text-white px-6 py-3 rounded-full font-semibold shadow hover:bg-indigo-700 transition"

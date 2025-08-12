@@ -1,44 +1,43 @@
 import Layout from "../components/Layout";
 
-export default function Home() {
+export default function HomeEN() {
   return (
-    <Layout lang="ru">
+    <Layout lang="en">
       {/* Hero Section */}
       <section className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-20 px-6 text-center">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
-          Умные чат-боты для бизнеса
+          Intelligent Chatbots for Business
         </h1>
         <p className="text-lg md:text-xl mb-6">
-          Разработка и интеграция Telegram-ботов с ИИ, которые продают, обслуживают и отвечают 24/7
+          We design and integrate AI-powered Telegram bots that sell, support, and engage customers 24/7.
         </p>
         <a
           href="https://t.me/danil_tylevich"
           className="bg-white text-indigo-700 px-6 py-3 rounded-full font-semibold shadow hover:shadow-lg transition"
         >
-          Связаться в Telegram
+          Let's Connect on Telegram
         </a>
       </section>
 
       {/* About */}
       <section className="py-16 px-6 max-w-5xl mx-auto text-center">
-        <h2 className="text-3xl font-bold mb-8">Кто я</h2>
         <p className="text-lg mb-4">
-          Я создаю умных ботов, которые интегрируются в CRM, работают с ИИ и автоматизируют рутину бизнеса.
+          We build smart, custom bots that integrate with your CRM, leverage AI, and automate your daily operations.
         </p>
         <p className="text-lg">
-          Персональный подход, быстрые сроки и гибкие цены.
+          Personalized service, fast delivery, and flexible pricing.
         </p>
       </section>
 
       {/* What Bots Do */}
       <section className="bg-gray-100 py-16 px-6">
-        <h2 className="text-3xl font-bold text-center mb-12">Что решают мои боты</h2>
+        <h2 className="text-3xl font-bold text-center mb-12">What Our Bots Can Do for You</h2>
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-5xl mx-auto">
           {[
-            { icon: "📩", text: "Автоматизация продаж" },
-            { icon: "🎯", text: "Лидогенерация и квалификация" },
-            { icon: "🤖", text: "Круглосуточная поддержка" },
-            { icon: "📊", text: "Интеграция с CRM и аналитикой" }
+            { icon: "📩", text: "Automate sales processes" },
+            { icon: "🎯", text: "Generate and qualify leads" },
+            { icon: "🤖", text: "Provide round-the-clock support" },
+            { icon: "📊", text: "Integrate seamlessly with CRM and analytics" }
           ].map((item, idx) => (
             <div
               key={idx}
@@ -53,12 +52,12 @@ export default function Home() {
 
       {/* How It Works */}
       <section className="py-16 px-6 max-w-5xl mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-12">Как это работает</h2>
+        <h2 className="text-3xl font-bold text-center mb-12">How It Works</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
-            { step: "1", title: "Анализ задачи" },
-            { step: "2", title: "Разработка" },
-            { step: "3", title: "Запуск и поддержка" }
+            { step: "1", title: "Task analysis" },
+            { step: "2", title: "Development" },
+            { step: "3", title: "Launch & ongoing support" }
           ].map((item, idx) => (
             <div
               key={idx}
@@ -73,14 +72,14 @@ export default function Home() {
 
       {/* Demo Placeholder */}
       <section className="bg-gray-100 py-16 px-6 text-center">
-        <h2 className="text-3xl font-bold mb-8">Примеры и демо</h2>
+        <h2 className="text-3xl font-bold mb-8">Examples & Demos</h2>
         <p className="mb-6">
-          Скоро здесь будут видео-примеры работы ботов. Подпишитесь, чтобы не пропустить.
+          Video examples of our bots in action are coming soon. Subscribe to stay updated.
         </p>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
           {[1, 2, 3].map((n) => (
             <div key={n} className="bg-white rounded-2xl p-6 shadow text-gray-400">
-              Видео {n} — скоро
+              Video {n} — coming soon
             </div>
           ))}
         </div>
@@ -88,12 +87,12 @@ export default function Home() {
 
       {/* CTA */}
       <section className="py-16 px-6 text-center">
-        <h2 className="text-3xl font-bold mb-6">Давайте обсудим ваш проект</h2>
+        <h2 className="text-3xl font-bold mb-6">Let's Discuss Your Project</h2>
         <a
           href="https://t.me/danil_tylevich"
           className="bg-indigo-600 text-white px-6 py-3 rounded-full font-semibold shadow hover:bg-indigo-700 transition"
         >
-          Написать в Telegram
+          Write us on Telegram
         </a>
       </section>
     </Layout>

@@ -1,24 +1,37 @@
-name: Deploy to VPS
+name: Deploy Static Site to VPS
 
 on:
   push:
-    branches:
-      - main
+    branches: [ main ]
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-
+    
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
-
-      - name: Deploy files via rsync over SSH
-        uses: burnett01/rsync-deployments@6.0.0
-        with:
-          switches: -avz --delete
-          path: ./           # Корень репозитория или путь к сборке
-          remote_path: /home/clickport/webdeploy
-          remote_host: ${{ secrets.REMOTE_HOST }}
-          remote_user: clickport
-          remote_key: ${{ secrets.REMOTE_PRIVATE_KEY }}
+    - name: Checkout code
+      uses: actions/checkout@v4
+      
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '18'
+        cache: 'npm'
+        
+    - name: Install dependencies
+      run: npm ci
+      
+    - name: Build static site
+      run: |
+        npm run build
+        npm run export
+        
+    - name: Deploy to server
+      uses: burnett01/rsync-deployments@6.0.0
+      with:
+        switches: -avz --delete
+        path: ./out/          # Папка со статической сборкой
+        remote_path: /home/clickport/webdeploy
+        remote_host: ${{ secrets.REMOTE_HOST }}
+        remote_user: clickport
+        remote_key: ${{ secrets.REMOTE_PRIVATE_KEY }}

@@ -7,7 +7,7 @@ export default function AboutEN() {
         <h2 className="text-3xl font-bold mb-8">About Us</h2>
         <p className="text-lg mb-4">
           ClickPort is an AI communications studio specializing in creating and
-          integrating intelligent Telegram bots for businesses.
+          integrating intelligent chatbots for businesses.
         </p>
         <p className="text-lg">
           We help companies automate sales, improve customer service, and boost efficiency
